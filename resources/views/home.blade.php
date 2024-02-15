@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 text-center py-4">
-            <h1>Trains</h1>
+            <h1 class="text-white">Trains</h1>
         </div>
         <div class="col-12">
             <div class="text-center">
@@ -48,6 +48,9 @@
                     @endforeach
                 </table>
             </div>
+        </div>
+        <div class="col-12 text-center py-4">
+            <h1 class="text-white">Buon Viaggio</h1>
         </div>
     </div>
 

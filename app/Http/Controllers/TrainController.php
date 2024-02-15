@@ -10,8 +10,8 @@ class TrainController extends Controller
 {
     public function index()
     {
-        $now = new DateTime(); // salvo la data odierna in una variabile
-        $today = $now->format('Y-m-d'); // formatto la data odierna in una stringa e la salvo nella variabile $today
+        $now = new DateTime();
+        $today = $now->format('Y-m-d');
 
         $trains = Train::where('departure_time', 'like', $today . '%')->orderBy('departure_time', 'asc')->get();
 

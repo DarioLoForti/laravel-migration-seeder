@@ -30,10 +30,22 @@
                             <td>{{ $train->arrival_time }}</td>
                             <td>{{ $train->train_code }}</td>
                             <td>{{ $train->number_carriages }}</td>
-                            <td>{{ $train->in_time }}</td>
-                            <td>{{ $train->deleted }}</td>
+                            <td>
+                                @if ($train->in_time)
+                                    In Time
+                                @else
+                                    Late
+                                @endif
+                            </td>
+                            <td>
+                                @if ($train->deleted)
+                                    Deleted
+                                @else
+                                    Travelling
+                                @endif
+                            </td>
+                        </tbody>
                     @endforeach
-                    </tbody>
                 </table>
             </div>
         </div>

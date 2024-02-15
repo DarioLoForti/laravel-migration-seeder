@@ -2,10 +2,40 @@
 
 @section('content')
 @endsection
-<div class="container">
+<div class="container-fluid">
     <div class="row">
+        <div class="col-12 text-center py-4">
+            <h1>Trains</h1>
+        </div>
         <div class="col-12">
-            <h1>Hello</h1>
+            <div class="text-center">
+                <table class="table">
+                    @foreach ($trains as $train)
+                        <thead>
+                            <th>Agency</th>
+                            <th>Departure Station</th>
+                            <th>Arrival Station</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
+                            <th>Train Code</th>
+                            <th>Number Carriages</th>
+                            <th>In Time</th>
+                            <th>Deleted</th>
+                        </thead>
+                        <tbody>
+                            <td>{{ $train->agency }}</td>
+                            <td>{{ $train->departure_station }}</td>
+                            <td>{{ $train->arrival_station }}</td>
+                            <td>{{ $train->departure_time }}</td>
+                            <td>{{ $train->arrival_time }}</td>
+                            <td>{{ $train->train_code }}</td>
+                            <td>{{ $train->number_carriages }}</td>
+                            <td>{{ $train->in_time }}</td>
+                            <td>{{ $train->deleted }}</td>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
